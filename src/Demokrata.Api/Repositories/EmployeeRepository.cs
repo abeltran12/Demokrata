@@ -1,5 +1,6 @@
 ﻿using Demokrata.Api.DemokrataContext;
 using Demokrata.Api.Models;
+using Demokrata.Api.Parameters;
 using Microsoft.EntityFrameworkCore;
 
 namespace Demokrata.Api.Repositories;
@@ -8,9 +9,21 @@ public class EmployeeRepository(DemokrataDbContext context) : IEmployeeRepositor
 {
     private readonly DemokrataDbContext _context = context;
 
-    public async Task<IEnumerable<Employee>> FindAllAsync()
+    public async Task<PagedList<Employee>> FindAllAsync(EmployeeParameters parameters)
     {
-        return _context.Employees.AsNoTracking();
+        var query = _context.Employees
+        .AsNoTracking()
+        .SearchByName(parameters.Name ?? string.Empty)
+        .OrderBy(x => x.Id);
+
+        var employeeSelect = await query
+            .Skip((parameters.PageNumber - 1) * parameters.PageSize)
+            .Take(parameters.PageSize)
+            .ToListAsync();
+
+        var count = await query.CountAsync();
+
+        return new PagedList<Employee>(employeeSelect, count, parameters.PageNumber, parameters.PageSize);
     }
 
     public async Task<Employee?> GetByIdAsync(int id)
@@ -32,7 +45,6 @@ public class EmployeeRepository(DemokrataDbContext context) : IEmployeeRepositor
 
     public async Task Delete(Employee employee)
     {
-        var employees = await GetByIdAsync(11);
         _context.Remove(employee);
         await _context.SaveChangesAsync();
     }

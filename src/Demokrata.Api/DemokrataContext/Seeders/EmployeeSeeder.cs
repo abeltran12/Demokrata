@@ -17,7 +17,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Andrés",
                 PrimerApellido = "González",
                 SegundoApellido = "López",
-                FechaNacimiento = new DateOnly(1990, 1, 1),
+                FechaNacimiento = new DateTime(1990, 1, 1),
                 Sueldo = 50000m
             },
             new Employee
@@ -27,7 +27,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Isabel",
                 PrimerApellido = "Rodríguez",
                 SegundoApellido = "Martínez",
-                FechaNacimiento = new DateOnly(1992, 5, 15),
+                FechaNacimiento = new DateTime(1992, 5, 15),
                 Sueldo = 55000m
             },
             new Employee
@@ -37,7 +37,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Antonio",
                 PrimerApellido = "Fernández",
                 SegundoApellido = "Pérez",
-                FechaNacimiento = new DateOnly(1985, 7, 20),
+                FechaNacimiento = new DateTime(1985, 7, 20),
                 Sueldo = 60000m
             },
             new Employee
@@ -47,7 +47,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Mariana",
                 PrimerApellido = "García",
                 SegundoApellido = "Hernández",
-                FechaNacimiento = new DateOnly(1988, 11, 11),
+                FechaNacimiento = new DateTime(1988, 11, 11),
                 Sueldo = 62000m
             },
             new Employee
@@ -57,7 +57,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Ángel",
                 PrimerApellido = "Ruiz",
                 SegundoApellido = "Ramírez",
-                FechaNacimiento = new DateOnly(1995, 3, 10),
+                FechaNacimiento = new DateTime(1995, 3, 10),
                 Sueldo = 48000m
             },
             new Employee
@@ -67,7 +67,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Sofía",
                 PrimerApellido = "Moreno",
                 SegundoApellido = "Torres",
-                FechaNacimiento = new DateOnly(1991, 9, 30),
+                FechaNacimiento = new DateTime(1991, 9, 30),
                 Sueldo = 57000m
             },
             new Employee
@@ -77,7 +77,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Luis",
                 PrimerApellido = "Romero",
                 SegundoApellido = "Vargas",
-                FechaNacimiento = new DateOnly(1987, 6, 5),
+                FechaNacimiento = new DateTime(1987, 6, 5),
                 Sueldo = 51000m
             },
             new Employee
@@ -87,7 +87,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Beatriz",
                 PrimerApellido = "Díaz",
                 SegundoApellido = "Castro",
-                FechaNacimiento = new DateOnly(1993, 8, 22),
+                FechaNacimiento = new DateTime(1993, 8, 22),
                 Sueldo = 59000m
             },
             new Employee
@@ -97,7 +97,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Tomás",
                 PrimerApellido = "Ortiz",
                 SegundoApellido = "Flores",
-                FechaNacimiento = new DateOnly(1989, 2, 14),
+                FechaNacimiento = new DateTime(1989, 2, 14),
                 Sueldo = 53000m
             },
             new Employee
@@ -107,7 +107,7 @@ public static class EmployeeSeeder
                 SegundoNombre = "Victoria",
                 PrimerApellido = "Vega",
                 SegundoApellido = "Morales",
-                FechaNacimiento = new DateOnly(1984, 12, 25),
+                FechaNacimiento = new DateTime(1984, 12, 25),
                 Sueldo = 62000m
             }
         );

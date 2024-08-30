@@ -1,6 +1,6 @@
 ﻿namespace Demokrata.Api.Dtos;
 
-public class CreateEmployeeDto
+public class OperationEmployeeDto
 {
     public required string PrimerNombre { get; set; }
 
@@ -10,7 +10,7 @@ public class CreateEmployeeDto
 
     public string? SegundoApellido { get; set; }
 
-    public DateOnly FechaNacimiento { get; set; }
+    public DateTime FechaNacimiento { get; set; }
 
     public decimal Sueldo { get; set; }
 }

@@ -12,7 +12,7 @@ public class EmployeeDto
 
     public string? SegundoApellido { get; set; }
 
-    public DateOnly FechaNacimiento { get; set; }
+    public DateTime FechaNacimiento { get; set; }
 
     public decimal Sueldo { get; set; }
 }
